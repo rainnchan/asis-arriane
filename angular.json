@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "login:build:production",
+            "firebaseProject": "ewan-bc735",
+            "firebaseHostingSite": "ewan-bc735"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ewan-bc735"
+  },
+  "targets": {
+    "ewan-bc735": {
+      "hosting": {
+        "login": [
+          "ewan-bc735"
+        ]
+      }
+    }
+  }
+}
