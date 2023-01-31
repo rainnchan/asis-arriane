@@ -3,7 +3,7 @@
     <div class="shape"></div>
   </div>
   <form #LogInForm="ngForm" (ngSubmit)="registerUser(LogInForm.value)">
-    <h3>Sign up</h3>
+    <h3>Login</h3>
   
     <label for="username">Email</label>
     <input type="email" placeholder="Email or Phone" id="email" ngModel name="email">
@@ -11,15 +11,13 @@
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" ngModel name="password">
 
-    <label for="password">Username</label>
-    <input type="text" placeholder="Password" id="username" ngModel name="username">
 
-    <button>Log In</button>
-  
+
+    <button>Sign Up</button>   
     <div class="social">
       <div class="go"><i class="fab fa-google"></i>  Google</div>
       <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
     </div>
   </form>
-
+  
 

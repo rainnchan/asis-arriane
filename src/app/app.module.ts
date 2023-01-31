@@ -8,11 +8,15 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +24,7 @@ import { SignupComponent } from './signup/signup.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase())
+    ,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
