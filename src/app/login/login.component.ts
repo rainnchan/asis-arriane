@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "@angular/fire/auth";
-import { Database,set,ref } from '@angular/fire/database';
+import { Database,set,ref, update } from '@angular/fire/database';
 
 @Component({
   selector: 'app-login',
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
 
 
-  set(ref(this.database, 'users/' + user.uid),{
+  update(ref(this.database, 'users/' + user.uid),{
   last_login:date
 
   }
