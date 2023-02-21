@@ -1,0 +1,17 @@
+<input type="text" ngModel id="email" [(ngModel)]="email" placeholder ="Change Email" name ="email">
+<input type="password" ngModel id="password" placeholder ="New Password" name ="password">
+<input type="submit" id="saveData" name ="Submit" value="Update Password">
+
+<div *ngFor="let u of users | async">
+    <div *ngIf= "u">
+        <div class="card 1">
+            <div class="card_title title-white">
+              <p class="p-title">Email: {{u.email}}</p>  
+              <p>Password: {{u.password}}</p>
+              <button (click)="del(u.email)">Delete</button>
+              <button (click)="fillForm(u.email)">update</button>
+            </div>
+          </div>
+        </div>
+
+</div>
