@@ -13,6 +13,7 @@ import { ShowdataComponent } from './showdata/showdata.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     SignupComponent,
     LoginComponent,
     ShowdataComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostComponent
   ],
   
   imports: [

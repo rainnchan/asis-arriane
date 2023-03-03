@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "@angular/fire/auth";
-import { Database,set,ref } from '@angular/fire/database';
+import { Database,set,ref,onValue } from '@angular/fire/database';
 
 @Component({
   selector: 'app-signup',
@@ -13,28 +13,41 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  registerUser(value: any){
+  ab = "";
+  registerUser(value:any){
 
-    createUserWithEmailAndPassword(this.auth, value.email, value.password)
-      .then((userCredential) => {
-        // Signed in 
-
-        const user = userCredential.user;
-
-        set(ref(this.database,'users/' + user.uid), {
-          username:value.username,
-          email:value.email,
-          password:value.password,
-        })
-alert('user created');
-
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-        alert(errorMessage);
-      });
+    const starCountRef = ref(this.database, 'users/' + value.email);
+    onValue(starCountRef, (snapshot) => {
+     const db = snapshot.val();  
+  this.ab = db.email
+ 
+     }); 
+  
+      
+     if (  value.email == null || value.email == "" || value.password == null || value.password == "" 
+      ||  value.username == null || value.username == ""
+      ){
+      alert('Fill the form ');
+     }else{
+      if(this.ab == value.email){
+       alert('user email already exist!'); 
+      }
+  
+        
+      else {
+       
+    set(ref(this.database, 'users/' + value.email), {
+        
+        email: value.email,
+        username: value.username,
+        password: value.password
+  
+  
+       }); 
+       alert('account created!');
+ 
+      }
+     }
   }
 
 }
