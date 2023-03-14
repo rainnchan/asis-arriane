@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+Html{
+    background:url('https://t4.ftcdn.net/jpg/02/98/32/47/360_F_298324747_UeJzU7kclMxWC96RjKfNYt79SsQWTTOn.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
