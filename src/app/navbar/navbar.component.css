@@ -4,7 +4,7 @@
     list-style-type: none;
   }
   .body{
-    background-color: #833813;
+    background-color: white;
   }
   ul{
     display: flex;
@@ -19,19 +19,20 @@
     padding: 1rem 2rem 1.15rem;
     text-transform: uppercase;
     cursor: pointer;
-    color: #ebebeb;
+    color: black;
+    font-family: Calibri;
     min-width: 80px;
     margin: auto;
   }
   
   li:hover {
-    background-image: url('https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/22476/salad-clipart-md.png');
+    background-color: black;
     background-size: 80% 110%;
     background-repeat: no-repeat;
-    color: #27262c;
+    color: white;
     animation: spring 300ms ease-out;
-    text-shadow: 0 -1px 0 #e30808;
     font-weight: bold;
+    font-family: Arial;
   }
   li:active {
     transform: translateY(4px);

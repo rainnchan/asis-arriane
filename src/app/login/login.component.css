@@ -5,17 +5,17 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #080710;
+.background{
+    background:url('https://t4.ftcdn.net/jpg/02/98/32/47/360_F_298324747_UeJzU7kclMxWC96RjKfNYt79SsQWTTOn.jpg') ;
 }
 
 form{
-    height: 520px;
+    height: 480px;
     width: 400px;
-    background-color: rgba(45, 42, 42, 0.82);
+    background-color: rgba(116, 166, 243, 0.82);
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 50%;
+    top: 57%;
     left: 80%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -58,7 +58,7 @@ input{
     color: #e5e5e5;
 }
 button{
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     background-color: rgb(0, 0, 0);
     color: #000000;
@@ -90,3 +90,5 @@ button{
 .social i{
   margin-right: 4px;
 }
+
+
