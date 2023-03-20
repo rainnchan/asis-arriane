@@ -19,7 +19,7 @@ data = ""
    onValue(starCountRef, (snapshot) => {
 const db = snapshot.val();
 this.data = db.password;  
-console.log(value.passwrd)
+console.log(this.data)
    });
    if (this.data == value.password){
     const date = new Date();

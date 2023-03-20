@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "@angular/fire/auth";
-import { Database,set,ref,onValue } from '@angular/fire/database';
+import { Database,set,ref,onValue,update } from '@angular/fire/database';
+
 
 @Component({
   selector: 'app-signup',
@@ -9,8 +10,44 @@ import { Database,set,ref,onValue } from '@angular/fire/database';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(public auth: Auth,public database:Database) { }
-
+  constructor(public database:Database) { }
+  data = "";
+  name = "";
+   delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
+  async Login(value: any){
+    
+ 
+    const starCountRef = ref(this.database, 'users/' + value.email1);
+    onValue(starCountRef, (snapshot) => {
+     const as = snapshot.val();   
+  
+this.data = as.password;
+     console.log( as.password)
+    
+   });
+   await this.delay(1000);
+   if (  value.email1 == null || value.email1 == "" || value.password1 == null || value.password1 == "" 
+   
+   ){
+    alert('Fill the form ');
+   }else{
+  if (this.data == value.password1){
+      const date = new Date();
+      update(ref(this.database, 'users/' + value.email1),{
+        last_login:date
+      });
+      alert('login!');
+      return;
+     }else{
+   
+  
+      alert('wrong credential!');
+      return;
+     }
+}
+  }
   ngOnInit(): void {
   }
   ab = "";
@@ -49,5 +86,5 @@ export class SignupComponent implements OnInit {
       }
      }
   }
-
+ 
 }

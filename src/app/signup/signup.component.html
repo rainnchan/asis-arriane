@@ -1,8 +1,4 @@
-<div class="background">
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
-  <form #LogInForm="ngForm" (ngSubmit)="registerUser(LogInForm.value)">
+  <!-- <form #LogInForm="ngForm" (ngSubmit)="registerUser(LogInForm.value)">
     <h3>Sign up</h3>
   
     <label for="username">Email</label>
@@ -23,3 +19,31 @@
   </form>
 
 
+
+  
+<app-login></app-login> -->
+<div class="body">
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form #SignupForm="ngForm" (ngSubmit)="registerUser(SignupForm.value)">
+					<label for="chk" aria-hidden="true">Sign up</label>
+         <input type="text" placeholder="name" id="username" ngModel name="username">
+          <input type="text" placeholder="Email or Phone" id="email" ngModel name="email">
+          <input type="password" placeholder="Password" id="password" ngModel name="password">
+
+          <button>Log In</button>
+      </form>
+			</div>
+
+			<div class="login">
+				<form #LoginForm="ngForm" (ngSubmit)="Login(LoginForm.value)">
+					<label for="chk" aria-hidden="true">Login</label>
+          <input type="text" placeholder="Email or Phone" id="email1" ngModel name="email1">
+          <input type="password" placeholder="Password" id="password1" ngModel name="password1">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</div>
