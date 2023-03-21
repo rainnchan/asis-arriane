@@ -52,6 +52,7 @@ this.data = as.password;
   ngOnInit(): void {
   }
   ab = "";
+  role = false;
   registerUser(value:any){
 
     const starCountRef = ref(this.database, 'users/' + value.email);
@@ -63,7 +64,7 @@ this.data = as.password;
   
       
      if (  value.email == null || value.email == "" || value.password == null || value.password == "" 
-      ||  value.username == null || value.username == ""
+      ||  value.roles == null || value.roles == ""
       ){
       alert('Fill the form ');
      }else{
@@ -73,12 +74,19 @@ this.data = as.password;
   
         
       else {
-       
+      if(value.roles == "admin"){
+        this.role = true;
+      } 
+      else if(value.roles == "user"){
+        this.role = false;
+      }
+
     set(ref(this.database, 'users/' + value.email), {
         
         email: value.email,
-        username: value.username,
-        password: value.password
+        // username: value.username,
+        password: value.password, 
+        admin: this.role
   
   
        }); 

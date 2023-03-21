@@ -29,7 +29,11 @@
 			<div class="signup">
 				<form #SignupForm="ngForm" (ngSubmit)="registerUser(SignupForm.value)">
 					<label for="chk" aria-hidden="true" style="color:black">Sign up</label>
-         <input type="text" placeholder="name" id="username" ngModel name="username">
+         <select type="text" id="roles" ngModel name="roles">
+          <option disabled selected value default>-- select an option</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+         </select>
           <input type="text" placeholder="Email or Phone" id="email" ngModel name="email">
           <input type="password" placeholder="Password" id="password" ngModel name="password">
 
