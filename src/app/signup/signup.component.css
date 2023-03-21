@@ -4,10 +4,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 80vh;
 	font-family: 'Jost', sans-serif;
-	background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm245-bb-12-job598.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=877c46f2081af6466e95e065125523ae");
-	background-size: 100% 100%;
+	/* background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm245-bb-12-job598.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=877c46f2081af6466e95e065125523ae");
+	background-size: cover; 
+	background-repeat: no-repeat;
+	margin-bottom: 10em; */
+	padding-top: 1%;
 }
 .main{
 	width: 350px;
@@ -17,6 +20,7 @@
 	background: url("https://images.unsplash.com/photo-1545173168-9f1947eebb7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGF1bmRyeXxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center/ cover;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
+	background-size: 100% 100%; 
 }
 #chk{
 	display: none;
@@ -88,4 +92,16 @@ button:hover{
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
+}
+.meh{
+	margin-left: 6.5em;
+	width: 50%;
+    padding: 20px;
+    border-radius: 30px;
+    background: #000000; 
+	color: #eee;
+}
+.meh:hover{
+	background-color: #eee;
+	color: #000;
 }

@@ -2,15 +2,16 @@
     <img class="laundry" src="https://cdn-icons-png.flaticon.com/512/3899/3899253.png">
     <form #registerForm="ngForm" (ngSubmit)="postna(registerForm.value)">
         <input type="text" [(ngModel)]="this.email" readonly ngModel name="name" id="name" placeholder="Name"><br>
-        <input type="text"  ngModel name="post" id="post" placeholder="post"><br>
+        <input type="text"  ngModel name="post" id="post" placeholder="message"><br>
         <input class="submit" type="submit">
     </form>
     </div>
     
     <div class="container" *ngFor="let z of account | async;let i = index">
-        <div  *ngIf= "z">
+        <div  class="msg" *ngIf= "z">
     <h1> {{z.name}}</h1>
     <p>{{z.post}}</p>
-        </div>
+
         <button *ngIf="this.data == true || this.email == z.name" (click)="del(z.id)">Delete</button>
+        </div>   
     </div>

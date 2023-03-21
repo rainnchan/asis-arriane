@@ -1,6 +1,7 @@
+<div class="container">
 <input type="text" ngModel id="email" [(ngModel)]="email" placeholder ="Change Email" name ="email">
-<input type="password" ngModel id="password" placeholder ="New Password" name ="password">
-<input type="submit" id="saveData" name ="Submit" value="Update Password">
+<input type="password" ngModel id="password" placeholder ="New Password" name ="password"><br>
+<input class="savedata" type="submit" id="saveData" name ="Submit" value="Update Password">
 
 <div *ngFor="let u of users | async">
     <div *ngIf= "u">
@@ -14,4 +15,5 @@
           </div>
         </div>
 
+</div>
 </div>
