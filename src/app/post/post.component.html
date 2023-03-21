@@ -12,4 +12,5 @@
     <h1> {{z.name}}</h1>
     <p>{{z.post}}</p>
         </div>
+        <button *ngIf="this.data == true || this.email == z.name" (click)="del(z.id)">Delete</button>
     </div>
