@@ -1,7 +1,7 @@
 <div class="container">
     <img class="laundry" src="https://cdn-icons-png.flaticon.com/512/3899/3899253.png">
     <form #registerForm="ngForm" (ngSubmit)="postna(registerForm.value)">
-        <input type="text"  ngModel name="name" id="name" placeholder="Name"><br>
+        <input type="text" [(ngModel)]="this.email" readonly ngModel name="name" id="name" placeholder="Name"><br>
         <input type="text"  ngModel name="post" id="post" placeholder="post"><br>
         <input class="submit" type="submit">
     </form>

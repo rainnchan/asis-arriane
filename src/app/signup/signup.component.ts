@@ -38,8 +38,9 @@ this.data = as.password;
       update(ref(this.database, 'users/' + value.email1),{
         last_login:date
       });
+      sessionStorage.setItem('email',value.email1)
       alert('login!');
-      return;
+      
      }else{
    
   
