@@ -4,12 +4,14 @@
 
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyC57jIF2GhzG2oPfmHkQ4z2Il1MqVZp2m8",
-    authDomain: "oyaoya-1888b.firebaseapp.com",
-    projectId: "oyaoya-1888b",
-    storageBucket: "oyaoya-1888b.appspot.com",
-    messagingSenderId: "224455006460",
-    appId: "1:224455006460:web:83cbaddd43e24f87a4df79"
+    apiKey: "AIzaSyCdAiR3B-iH4aPpJaVe60ZMZrZaN6S8gls",
+  authDomain: "asis-5332c.firebaseapp.com",
+  databaseURL: "https://asis-5332c-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "asis-5332c",
+  storageBucket: "asis-5332c.appspot.com",
+  messagingSenderId: "868862555260",
+  appId: "1:868862555260:web:57ad13dcb1ed9bd2c685f9",
+  measurementId: "G-WN3S4D290L"
   },
   production: false
 };

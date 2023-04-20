@@ -13,5 +13,21 @@
     <p>{{z.post}}</p>
 
         <button *ngIf="this.data == true || this.email == z.name" (click)="del(z.id)">Delete</button>
+        
+
+        <form action="/html/tags/html_form_tag_action.cfm" method="post">
+            <div>
+            <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+            </textarea>
+            </div>
+            <input type="submit" value="Submit">
+            </form>
+
+
+
+    
         </div>   
     </div>
+
+
+ 

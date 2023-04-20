@@ -43,7 +43,7 @@ this.data = as.password;
       
      }else{
    
-  
+  console.log(this.data)
       alert('wrong credential!');
       return;
      }

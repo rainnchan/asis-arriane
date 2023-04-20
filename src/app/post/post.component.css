@@ -7,7 +7,7 @@
     border-radius:15px;
     box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
    background: rgb(185, 112, 38); /* Old browsers */
-  background: -moz-linear-gradient(45deg, rgb(185, 112, 38) 0%, rgb(185, 112, 38) 99%); /* FF3.6-15 */
+  background: -moz-linear-gradient(45deg, rgb(255, 255, 255) 0%, rgb(185, 112, 38) 99%); /* FF3.6-15 */
   background: -webkit-linear-gradient(45deg, rgb(185, 112, 38)0%,rgb(185, 112, 38) 99%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(rgb(185, 112, 38) 0%,rgb(185, 112, 38) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
@@ -35,6 +35,31 @@
     height: 10em;
     padding-top: 3em;
     padding-left: 12em;
+}
+
+.date{
+    font-size: 11px;
+}
+.comment-text{
+    font-size: 12px;
+}
+.fs-12{
+    font-size: 12px;
+}
+.shadow-none{
+    box-shadow: none;
+}
+.name{
+    color: #007bff;
+}
+.cursor:hover{
+    color: blue;
+}
+.cursor{
+    cursor: pointer;
+}
+.textarea{
+    resize: none;
 }
 
 #name{
