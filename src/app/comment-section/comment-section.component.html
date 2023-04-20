@@ -1,1 +1,10 @@
-<p>comment-section works!</p>
+<div *ngFor="let comment of comments">
+    <h3>{{ comment.author }}</h3>
+    <p>{{ comment.text }}</p>
+  </div>
+  <form (ngSubmit)="addComment()">
+    <input type="text" placeholder="Name" [(ngModel)]="newComment.author">
+    <textarea placeholder="Comment" [(ngModel)]="newComment.text"></textarea>
+    <button type="submit">Add Comment</button>
+  </form>
+  

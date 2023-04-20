@@ -4,12 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { PostComponent } from './post/post.component';
 import { ShowdataComponent } from './showdata/showdata.component';
 import { SignupComponent } from './signup/signup.component';
+import { CommentSectionComponent } from './comment-section/comment-section.component'; 
 
 const routes: Routes = [
   {path: 'signup',component:SignupComponent},
   {path: 'login',component:LoginComponent},
   {path: 'showdata',component:ShowdataComponent},
   {path: 'post', component:PostComponent},
+  {path: 'comment-section', component:CommentSectionComponent},
   {path: '',redirectTo:'signup',pathMatch:'full'}  
 
 ];
