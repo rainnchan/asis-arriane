@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { PostComponent } from './post/post.component';
+import { CommentSectionComponent } from './comment-section/comment-section.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { PostComponent } from './post/post.component';
     LoginComponent,
     ShowdataComponent,
     NavbarComponent,
-    PostComponent
+    PostComponent,
+    CommentSectionComponent
   ],
   
   imports: [
