@@ -37,7 +37,7 @@
     padding-left: 12em;
 }
 
-.date{
+/* .date{
     font-size: 11px;
 }
 .comment-text{
@@ -60,7 +60,7 @@
 }
 .textarea{
     resize: none;
-}
+} */
 
 #name{
 
@@ -83,4 +83,7 @@
 
 .msg{
     margin-left: 12em;
+}
+.pointer{
+    cursor:pointer;
 }

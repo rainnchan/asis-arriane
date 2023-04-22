@@ -12,10 +12,12 @@
     <h1> {{z.name}}</h1>
     <p>{{z.post}}</p>
 
-        <button *ngIf="this.data == true || this.email == z.name" (click)="del(z.id)">Delete</button>
-        
-
-        <form action="/html/tags/html_form_tag_action.cfm" method="post">
+    
+        <button (click)="getComment(z.id)">View Comments</button>
+    <button *ngIf="this.data == true || this.email == z.name" (click)="del(z.id)">Delete</button>
+    <br>
+    <hr>
+        <!-- <form action="/html/tags/html_form_tag_action.cfm" method="post">
             <div>
             <input name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;" ngModel name="post" id="post">
             <div class="container" *ngFor="let z of account | async;let i = index"> 
@@ -25,8 +27,37 @@
             <input type="submit" value="Submit">
         </div> 
         </div>
+            </form> -->  
+            <i class="fa fa-heart" (click)="unlike(z.likes)" *ngIf="this.likers == this.email && z.id == this.currentpost"></i>  
+        
+            <i class="fa fa-heart-o" *ngIf="this.likers != this.email  && z.id == this.currentpost" (click)="like(z.likes)"></i><p *ngIf=" z.id == this.currentpost" >{{z.likes}}</p>
+            <h2 >comments</h2>
+            <div *ngFor="let y of comments | async;">
+              <div *ngIf="z.id == y.postid">
+                <h2>{{y.name}}</h2>
+                <small>{{y.comment}}</small><br>
+                <small (click)="getReply(y.id)" class="pointer">reply</small>
+                <div *ngFor="let a of reply | async;">
+                    <div *ngIf="z.id == y.postid">
+                      <h2>{{a.name}}</h2>
+                      <small>{{a.reply}}</small><br>
+                    
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <form #registerForm="ngForm" (ngSubmit)="addComment(registerForm.value)" *ngIf="modeC==true">
+                <input type="text" [(ngModel)]="z.id" hidden id="id" name="id" ngModel>
+                <input type="text" [(ngModel)]="this.email" readonly ngModel name="name1" id="name1" placeholder="Name"><br>
+                <input type="text"  ngModel name="post1" id="post1" placeholder="Comment"><br>
+                <input type="submit" value="comment">
             </form>
-
+            <form #registerForm="ngForm" (ngSubmit)="rep(registerForm.value)" *ngIf="modeR==true">
+          
+                <input type="text" [(ngModel)]="this.email" readonly ngModel name="name1" id="name1" placeholder="Name"><br>
+                <input type="text"  ngModel name="post1" id="post1" placeholder="reply"><br>
+                <input type="submit" value="reply">
+            </form>
 
 
     
