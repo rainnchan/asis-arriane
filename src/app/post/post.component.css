@@ -1,20 +1,16 @@
 .container{
-    border: solid black;
     height: 400px;
     width: 500px;
     margin: 20px auto;
     margin-top:20px;
     border-radius:15px;
-    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
-   background: rgb(185, 112, 38); /* Old browsers */
-  background: -moz-linear-gradient(45deg, rgb(255, 255, 255) 0%, rgb(185, 112, 38) 99%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, rgb(185, 112, 38)0%,rgb(185, 112, 38) 99%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(rgb(185, 112, 38) 0%,rgb(185, 112, 38) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /* box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3); */
+  /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 ); IE6-9 fallback on horizontal gradient */
   }
 .submit{
     margin-left: 17em;
-        width: 60%;
+        width: 30%;
         height: 40px;
         margin: 10px auto;
         justify-content: center;
@@ -67,7 +63,7 @@
     width: 50%;
     padding: 20px;
     border-radius: 30px;
-    background: #fff;
+    /* background: #fff; */
     box-shadow: 0 0 25px 0 #d6e0f5; 
     margin-left: 8em;
 }
@@ -76,7 +72,6 @@
     width: 50%;
     padding: 20px;
     border-radius: 15px;
-    background: #fff;
     box-shadow: 0 0 25px 0 #d6e0f5; 
     margin-left: 8em;
 }
@@ -87,3 +82,17 @@
 .pointer{
     cursor:pointer;
 }
+.container1{
+    /* border: solid black; */
+    height: 400px;
+    width: 500px;
+    margin: 20px auto;
+    margin-top:20px;
+    border-radius:15px;
+    box-shadow: 10px 10px lightblue;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  .all{
+    column-count: 2;
+  }
